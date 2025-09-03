@@ -1,0 +1,12 @@
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/bin/Debug/net9.0/ZipManagerApi.Domain.deps.json
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/bin/Debug/net9.0/ZipManagerApi.Domain.dll
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/bin/Debug/net9.0/ZipManagerApi.Domain.pdb
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/obj/Debug/net9.0/ZipManagerApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/obj/Debug/net9.0/ZipManagerApi.Domain.AssemblyInfoInputs.cache
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/obj/Debug/net9.0/ZipManagerApi.Domain.AssemblyInfo.cs
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/obj/Debug/net9.0/ZipManagerApi.Domain.csproj.CoreCompileInputs.cache
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/obj/Debug/net9.0/ZipManagerApi.Domain.sourcelink.json
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/obj/Debug/net9.0/ZipManagerApi.Domain.dll
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/obj/Debug/net9.0/refint/ZipManagerApi.Domain.dll
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/obj/Debug/net9.0/ZipManagerApi.Domain.pdb
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/obj/Debug/net9.0/ref/ZipManagerApi.Domain.dll

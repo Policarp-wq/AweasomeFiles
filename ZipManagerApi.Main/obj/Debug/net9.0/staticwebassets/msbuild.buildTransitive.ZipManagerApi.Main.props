@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/ZipManagerApi.Main.props" />
+</Project>

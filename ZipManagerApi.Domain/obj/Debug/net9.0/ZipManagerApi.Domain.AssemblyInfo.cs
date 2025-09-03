@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ZipManagerApi.Main")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ZipManagerApi.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5692da44be2f811f25c7e0860adf60a54765051")]
-[assembly: System.Reflection.AssemblyProductAttribute("ZipManagerApi.Main")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ZipManagerApi.Main")]
+[assembly: System.Reflection.AssemblyProductAttribute("ZipManagerApi.Domain")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ZipManagerApi.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

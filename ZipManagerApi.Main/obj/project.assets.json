@@ -417,6 +417,16 @@
             "related": ".xml"
           }
         }
+      },
+      "ZipManagerApi.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ZipManagerApi.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ZipManagerApi.Domain.dll": {}
+        }
       }
     }
   },
@@ -1072,12 +1082,18 @@
         "serilog.sinks.file.6.0.0.nupkg.sha512",
         "serilog.sinks.file.nuspec"
       ]
+    },
+    "ZipManagerApi.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ZipManagerApi.Domain/ZipManagerApi.Domain.csproj",
+      "msbuildProject": "../ZipManagerApi.Domain/ZipManagerApi.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.AspNetCore.OpenApi >= 9.0.8",
-      "Serilog.AspNetCore >= 9.0.0"
+      "Serilog.AspNetCore >= 9.0.0",
+      "ZipManagerApi.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1105,7 +1121,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/ZipManagerApi.Domain.csproj": {
+              "projectPath": "/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Domain/ZipManagerApi.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
