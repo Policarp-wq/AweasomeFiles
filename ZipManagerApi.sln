@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipManagerApi.Tests", "ZipManagerApi.Tests\ZipManagerApi.Tests.csproj", "{72D8CCCF-F48E-426E-9258-8C23634D6106}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipManagerApi.Main", "ZipManagerApi.Main\ZipManagerApi.Main.csproj", "{773EAC54-5FD7-40F4-A6CA-9515036510A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72D8CCCF-F48E-426E-9258-8C23634D6106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D8CCCF-F48E-426E-9258-8C23634D6106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D8CCCF-F48E-426E-9258-8C23634D6106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D8CCCF-F48E-426E-9258-8C23634D6106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773EAC54-5FD7-40F4-A6CA-9515036510A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773EAC54-5FD7-40F4-A6CA-9515036510A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773EAC54-5FD7-40F4-A6CA-9515036510A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773EAC54-5FD7-40F4-A6CA-9515036510A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
