@@ -9,6 +9,7 @@
       "ZipManagerApi.Main/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "9.0.8",
+          "Scalar.AspNetCore": "2.7.2",
           "Serilog.AspNetCore": "9.0.0",
           "ZipManagerApi.Domain": "1.0.0"
         },
@@ -95,6 +96,14 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
             "assemblyVersion": "1.6.17.0",
             "fileVersion": "1.6.17.0"
+          }
+        }
+      },
+      "Scalar.AspNetCore/2.7.2": {
+        "runtime": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "assemblyVersion": "2.7.2.0",
+            "fileVersion": "2.7.2.0"
           }
         }
       },
@@ -320,6 +329,13 @@
       "sha512": "sha512-Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
       "path": "microsoft.openapi/1.6.17",
       "hashPath": "microsoft.openapi.1.6.17.nupkg.sha512"
+    },
+    "Scalar.AspNetCore/2.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MtxRKvCqmzoH7LQe2GLfo2rAjYix+2G2GwTaKjLThySOPwU99vf0VefSWt5tOAEz/wS7qD87lm1Bu92oZyjr8w==",
+      "path": "scalar.aspnetcore/2.7.2",
+      "hashPath": "scalar.aspnetcore.2.7.2.nupkg.sha512"
     },
     "Serilog/4.2.0": {
       "type": "package",

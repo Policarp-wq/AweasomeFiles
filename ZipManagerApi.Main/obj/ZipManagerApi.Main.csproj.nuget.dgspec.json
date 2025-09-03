@@ -113,6 +113,10 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.7.2, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"

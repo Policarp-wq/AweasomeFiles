@@ -44,3 +44,4 @@
 /home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Main/obj/Debug/net9.0/ZipManagerApi.Main.pdb
 /home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Main/obj/Debug/net9.0/ZipManagerApi.Main.genruntimeconfig.cache
 /home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Main/obj/Debug/net9.0/ref/ZipManagerApi.Main.dll
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Main/bin/Debug/net9.0/Scalar.AspNetCore.dll
