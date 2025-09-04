@@ -9,5 +9,5 @@ public interface IZipService
 
     Guid ZipFiles(List<string> fileNames);
     List<string> GetAllFiles();
-    ZipProgress? GetProgress(Guid id);
+    ZipStatus? GetProgress(Guid id);
 }

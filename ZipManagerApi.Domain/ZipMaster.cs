@@ -31,12 +31,12 @@ public class ZipMaster
             .ToList()!;
     }
 
-    public ZipProgress? GetProgress(Guid id)
+    public ZipStatus? GetProgress(Guid id)
     {
         if (_processingIds.Contains(id))
-            return ZipProgress.Processing;
+            return ZipStatus.Processing;
         if (File.Exists(GetArchiveFilePath(id)))
-            return ZipProgress.Finished;
+            return ZipStatus.Finished;
         return null;
     }
 
@@ -86,7 +86,8 @@ public class ZipMaster
                     () => archive.CreateEntryFromFile(file, entryName, CompressionLevel.Optimal),
                     token
                 );
-                await Task.Delay(5000);
+                // For status testing
+                // await Task.Delay(5000);
             }
             return zipFile.Name;
         }

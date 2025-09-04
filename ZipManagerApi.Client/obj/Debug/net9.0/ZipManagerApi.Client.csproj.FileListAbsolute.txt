@@ -1,0 +1,15 @@
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/bin/Debug/net9.0/ZipManagerApi.Client
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/bin/Debug/net9.0/ZipManagerApi.Client.deps.json
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/bin/Debug/net9.0/ZipManagerApi.Client.runtimeconfig.json
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/bin/Debug/net9.0/ZipManagerApi.Client.dll
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/bin/Debug/net9.0/ZipManagerApi.Client.pdb
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/ZipManagerApi.Client.GeneratedMSBuildEditorConfig.editorconfig
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/ZipManagerApi.Client.AssemblyInfoInputs.cache
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/ZipManagerApi.Client.AssemblyInfo.cs
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/ZipManagerApi.Client.csproj.CoreCompileInputs.cache
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/ZipManagerApi.Client.sourcelink.json
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/ZipManagerApi.Client.dll
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/refint/ZipManagerApi.Client.dll
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/ZipManagerApi.Client.pdb
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/ZipManagerApi.Client.genruntimeconfig.cache
+/home/policarp/projects/kasper/AweasomeFiles/ZipManagerApi.Client/obj/Debug/net9.0/ref/ZipManagerApi.Client.dll

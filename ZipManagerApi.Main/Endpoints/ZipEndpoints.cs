@@ -39,7 +39,7 @@ public static class ZipEndpoints
         return TypedResults.File(stream, "application/zip", Path.GetFileName(stream.Name));
     }
 
-    public static Results<Ok<ZipProgress>, NotFound> GetZipStatus(
+    public static Results<Ok<ZipStatus>, NotFound> GetZipStatus(
         [FromQuery] Guid id,
         IZipService zipService
     )

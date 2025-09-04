@@ -23,7 +23,7 @@ public class ZipService : IZipService
         return _zipMaster.GetArchivedFile(id);
     }
 
-    public ZipProgress? GetProgress(Guid id)
+    public ZipStatus? GetProgress(Guid id)
     {
         return _zipMaster.GetProgress(id);
     }
