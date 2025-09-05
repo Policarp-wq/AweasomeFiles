@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZipManagerApi.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62113fbc17ebaeefccf1c57e2ca79f79be28ade9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+894cec581415d03073d3a758d078f6aa755d1082")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZipManagerApi.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZipManagerApi.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

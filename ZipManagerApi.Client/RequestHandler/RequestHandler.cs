@@ -75,15 +75,10 @@ public class RequestHandler(HttpClient _client, string _basePath) : IRequestHand
         return status;
     }
 
-    //Лучшим решением было бы вынести логику самой скачки файла на ПК в отдельное место, однако тогда возникают проблемы с закрытием потока
-    public async Task DownloadArchive(Guid id, string destination)
+    public async Task<Stream> DownloadArchive(Guid id)
     {
         var response = await MakeRequest(HttpMethod.Get, $"/zip?id={id}");
-        await using var stream = await response.Content.ReadAsStreamAsync();
-        if (!Path.IsPathFullyQualified(destination))
-            throw new RequestException("Invalid path");
-        await using var fileStream = new FileStream(destination, FileMode.Create, FileAccess.Write);
-        await stream.CopyToAsync(fileStream);
+        return await response.Content.ReadAsStreamAsync();
     }
 
     public async Task<Guid> ZipFiles(List<string> fileNames)

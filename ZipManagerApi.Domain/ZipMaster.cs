@@ -8,7 +8,7 @@ namespace ZipManagerApi.Domain;
 public class ZipMaster
 {
     public readonly string RootFolderPath;
-    public const string OutputSubdirName = "zip_output";
+    public readonly string OutputSubdirName = "zip_output";
     private HashSet<Guid> _processingIds;
 
     public ZipMaster(string rootFolderPath)
@@ -31,7 +31,7 @@ public class ZipMaster
             .ToList()!;
     }
 
-    public ZipStatus? GetProgress(Guid id)
+    public ZipStatus? GetStatus(Guid id)
     {
         if (_processingIds.Contains(id))
             return ZipStatus.Processing;
@@ -42,7 +42,7 @@ public class ZipMaster
 
     private static string GetZippedName(string fileName) => $"{fileName}.zip";
 
-    private string GetArchiveFilePath(Guid fileId) =>
+    public string GetArchiveFilePath(Guid fileId) =>
         GetFullOutputPath(GetZippedName(fileId.ToString()));
 
     private string GetFullOutputPath(string zipFileName) =>
@@ -50,7 +50,6 @@ public class ZipMaster
 
     private string GetFullFileEntryPath(string file) => Path.Combine(RootFolderPath, file);
 
-    //TODO: lazy with IEnumerable
     private List<string> GetFullFilePaths(List<string> fileNames)
     {
         List<string> res = [];
@@ -64,37 +63,25 @@ public class ZipMaster
         return res;
     }
 
-    public async Task<string> ZipFiles(
-        Guid processId,
-        List<string> filePaths,
-        CancellationToken token
-    )
+    private string ZipFiles(Guid processId, List<string> filePaths, CancellationToken token)
     {
         string outputFileName = GetZippedName(processId.ToString());
         string outputPath = GetFullOutputPath(outputFileName);
-
-        using var zipFile = new FileStream(outputPath, FileMode.Create);
-        using var archive = new ZipArchive(zipFile, ZipArchiveMode.Create);
         try
         {
+            using var zipFile = new FileStream(outputPath, FileMode.Create);
+            using var archive = new ZipArchive(zipFile, ZipArchiveMode.Create);
             _processingIds.Add(processId);
             foreach (var file in filePaths)
             {
                 token.ThrowIfCancellationRequested();
                 string entryName = Path.GetFileName(file);
-                await Task.Run(
-                    () => archive.CreateEntryFromFile(file, entryName, CompressionLevel.Optimal),
-                    token
-                );
-                // For status testing
-                // await Task.Delay(5000);
+                archive.CreateEntryFromFile(file, entryName, CompressionLevel.Optimal);
             }
             return zipFile.Name;
         }
         catch (OperationCanceledException)
         {
-            zipFile.Close();
-            zipFile.Dispose();
             File.Delete(outputPath);
             throw new ZipMasterException("Zip process cancelled");
         }
@@ -104,15 +91,16 @@ public class ZipMaster
         }
     }
 
-    public Guid StartZippingFiles(List<string> fileNames, CancellationToken token)
+    public ZipProcess GetZipTask(List<string> fileNames, CancellationToken token)
     {
+        if (fileNames.Count == 0)
+            throw new ZipMasterException("No files provided for zipping");
         var filePaths = GetFullFilePaths(fileNames);
         Guid processId = Guid.CreateVersion7();
-        Task.Run(async () => await ZipFiles(processId, filePaths, token));
-        return processId;
+        return new(processId, new Task<string>(() => ZipFiles(processId, filePaths, token)));
     }
 
-    public FileStream? GetArchivedFile(Guid fileId)
+    public FileStream? GetArchivedFileStream(Guid fileId)
     {
         var path = GetArchiveFilePath(fileId);
         if (_processingIds.Contains(fileId))
