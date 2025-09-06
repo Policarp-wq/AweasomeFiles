@@ -1,6 +1,7 @@
 using System;
 using System.IO.Compression;
 using System.Threading.Tasks;
+using ZipManagerApi.Client.Command;
 using ZipManagerApi.Domain;
 
 namespace ZipManagerApi.Tests.ZipMasterTests;
@@ -32,5 +33,18 @@ public class ZipInfoTests : IClassFixture<FileFixture>
         Assert.NotNull(stream);
         using var archive = ZipFile.OpenRead(_zipMaster.GetArchiveFilePath(process.ProcessId));
         Assert.Equal(_zipMaster.GetAllFiles().Count, archive.Entries.Count);
+    }
+
+    [Fact]
+    public async Task RepeatedFiles_CanBe_Zipped()
+    {
+        List<string> repeatedFiles = ["1", "1", "2"];
+        var process = _zipMaster.GetZipTask(repeatedFiles, CancellationToken.None);
+        process.ZipTask.Start();
+        await process.ZipTask;
+        using var stream = _zipMaster.GetArchivedFileStream(process.ProcessId);
+        Assert.NotNull(stream);
+        using var archive = ZipFile.OpenRead(_zipMaster.GetArchiveFilePath(process.ProcessId));
+        Assert.Equal(repeatedFiles.Count, archive.Entries.Count);
     }
 }

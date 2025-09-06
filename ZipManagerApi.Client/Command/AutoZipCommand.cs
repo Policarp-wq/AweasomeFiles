@@ -12,7 +12,7 @@ public class AutoZipCommand : ICommand
 
     public async Task<string> Execute(IRequestHandler handler, string args)
     {
-        List<string> splittedArgs = new(args.Split(' '));
+        List<string> splittedArgs = new(args.Split(' ', StringSplitOptions.RemoveEmptyEntries));
         if (splittedArgs.Count < 2)
             throw new CommandException(
                 "Auto command requires at least 2 args: files and result file path"
