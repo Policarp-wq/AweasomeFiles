@@ -13,6 +13,7 @@ public static class CommandExecuter
         { UserCommand.List, new ListCommand() },
         { UserCommand.Status, new StatusCommand() },
         { UserCommand.Download, new DownloadCommand() },
+        { UserCommand.Auto, new AutoZipCommand() },
     };
 
     public static async Task<string> ExecuteCommand(
