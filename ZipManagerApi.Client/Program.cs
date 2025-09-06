@@ -10,11 +10,17 @@ void PrintHelp()
     {
         Console.WriteLine(com);
     }
-    System.Console.WriteLine("Print `help` for this message");
+    Console.WriteLine("Print `help` for this message");
 }
 
-string zipManagerApiLink = "http://localhost:5262";
-var requestHandler = new RequestHandler(new HttpClient(), zipManagerApiLink); //!!!
+if (args.Length == 0)
+{
+    Console.WriteLine("You need to specify url link in args");
+    return -1;
+}
+string zipManagerApiLink = args[0];
+
+var requestHandler = new RequestHandler(new HttpClient(), zipManagerApiLink);
 Console.WriteLine("Starting client for zipping files.");
 PrintHelp();
 CancellationTokenSource source = new();
@@ -44,15 +50,11 @@ try
             var output = await CommandExecuter.ExecuteCommand(requestHandler, command, arg);
             Console.WriteLine(output);
         }
-        catch (AppException ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
         catch (Exception ex)
         {
-            Console.WriteLine($"Unhandled exception: {ex.Message}");
-            throw;
+            Console.WriteLine(ex.Message);
         }
     }
 }
 catch (OperationCanceledException) { }
+return 0;

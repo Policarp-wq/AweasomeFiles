@@ -11,6 +11,18 @@ services:
       - ACCEPT_EULA=Y
       - SEQ_STORAGE_PATH=/data
       - SEQ_PASSWORD=12345
+  zip:
+    image: zipapi:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - /home/policarp/projects/test-dir:/App/zip_output
+    environment:
+      "ASPNETCORE_ENVIRONMENT": "Development"
+      "ASP_ZIP_ROOT": "/App/zip_output"
+      "ASP_SEQ_URL": "http://seq:80"
+      "ASP_SEQ_API_KEY": "12345678"
+      "ASPNETCORE_URLS": "http://0.0.0.0:5000"
 
 volumes:
   seq-data:

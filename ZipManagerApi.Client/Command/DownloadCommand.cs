@@ -30,7 +30,7 @@ public class DownloadCommand : ICommand
 
     public async Task<string> Execute(IRequestHandler handler, string args)
     {
-        var splitted = args.Split(' ');
+        var splitted = args.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         if (splitted.Length != 2)
             throw new CommandException("Download command requires two args: id pathToDownload");
         var (idStr, path) = (splitted[0], splitted[1]);
@@ -38,6 +38,6 @@ public class DownloadCommand : ICommand
             throw new CommandException($"Failed to parse {idStr} to Guid");
         using var stream = await handler.DownloadArchive(id);
         await SaveFile(stream, path);
-        return "Download completed to " + path;
+        return "Archive saved to " + path;
     }
 }
